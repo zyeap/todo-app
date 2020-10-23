@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="main-heading">
+        <h1>To-do List</h1>
+        <button class="themeBtn" value="light">Light Mode</button>
+        <button class="themeBtn" value="dark">Dark Mode</button>
+    </header>
+
+    <form id="main-form">
+        <div id="form-container">
+            <input type="text" id="searchBox" placeholder="Search for a task..." onkeydown="return event.key != 'Enter';">
+            <select id="filterItems">
+                <option value="all">All</option>
+                <option value="done">Done</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+        <div id="input-container">
+            <input type="text" id="inputBox" placeholder="Enter a task to do here...">
+            <button type="submit" id="inputBtn"><i class="fas fa-plus square"></i></button>
+        </div>
+    </form>
+
+    <div id="list-container">
+        <ul id="todo-list"></ul>
+    </div>
+</body>
+</html>
