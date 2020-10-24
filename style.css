@@ -131,7 +131,15 @@ body{
     background: darkred;
 }
 
+.trashBtn:hover{
+    cursor: pointer;
+}
+
 .completed{
     text-decoration-line: line-through;
     opacity: 0.5;
+}
+
+#labelText{
+    font-weight: bold;
 }

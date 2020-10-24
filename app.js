@@ -3,11 +3,17 @@ const todoList = document.getElementById("todo-list");
 const todoInput = document.getElementById("inputBox");
 const todoBtn = document.getElementById("inputBtn");
 const todoFilter = document.getElementById("filterDropdown");
+const todoSearch = document.getElementById("searchBox");
+const todoLabel = document.getElementById("labelText");
+const todoTheme = document.querySelectorAll(".themeBtn").forEach(button => {
+    button.addEventListener("click", changeTheme);
+})
 
 //event listeners
 todoBtn.addEventListener("click", addItem);
 todoList.addEventListener("click", checkItem);
 todoFilter.addEventListener("click", filterItem);
+todoSearch.addEventListener("input", searchItem)
 
 //functions
 function addItem(e){
@@ -67,4 +73,30 @@ function filterItem(e){
                 break;
         }
     })
+}
+
+function searchItem(e){
+    const allItems = todoList.childNodes;
+    allItems.forEach(item => {
+        lowerText = item.innerText.toLowerCase();
+        if (lowerText.includes(e.target.value.toLowerCase())){
+            item.style.display = "flex";
+        } else {
+            item.style.display = "none";
+        }
+    })
+}
+
+function changeTheme(e){
+    if (e.target.value == "dark"){
+        document.body.style.backgroundColor = "black";
+        todoLabel.style.color = "white";
+        todoList.style.color = "white";
+    }
+
+    if (e.target.value == "light"){
+        document.body.style.backgroundColor = "white";
+        todoLabel.style.color = "black";
+        todoList.style.color = "black";
+    }
 }
