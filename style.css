@@ -54,7 +54,7 @@ body{
     height: 1.5rem;
 }
 
-#filterItems{
+#filterDropdown{
     height: 2rem;
 }
 
@@ -92,7 +92,7 @@ body{
 
 #todo-list{
     list-style: none;
-    min-width: 40%;
+    min-width: 30%;
 }
 
 .todoDiv{
@@ -107,14 +107,19 @@ body{
 }
 
 .completedBtn, .trashBtn{
-    pointer-events:none;
     margin-right: 10px;
-    padding: 15px;
+    padding: 10px;
     color: white;
     border-style: none;
 }
 
+.fa-trash,
+.fa-check{
+    pointer-events:none;
+}
+
 .completedBtn{
+    margin-left: 10px;
     background: green;
 }
 
@@ -124,4 +129,9 @@ body{
 
 .trashBtn{
     background: darkred;
+}
+
+.completed{
+    text-decoration-line: line-through;
+    opacity: 0.5;
 }
