@@ -78,3 +78,50 @@ body{
     background: linear-gradient(lightgreen, darkgreen);
     cursor: pointer;
 }
+
+#list-container{
+    min-width: 80%;
+    margin: 0 auto;
+}
+
+#list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-list{
+    list-style: none;
+    min-width: 40%;
+}
+
+.todoDiv{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.todoItem{
+    flex: 1;
+}
+
+.completedBtn, .trashBtn{
+    pointer-events:none;
+    margin-right: 10px;
+    padding: 15px;
+    color: white;
+    border-style: none;
+}
+
+.completedBtn{
+    background: green;
+}
+
+.completedBtn:hover{
+    cursor: pointer;
+}
+
+.trashBtn{
+    background: darkred;
+}
