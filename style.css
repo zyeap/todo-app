@@ -45,6 +45,10 @@ body{
     margin-bottom: 10px;
 }
 
+#labelText{
+    font-weight: bold;
+}
+
 #searchBox{
     padding: 5px 0px;
     margin-left: 20px;
@@ -138,8 +142,4 @@ body{
 .completed{
     text-decoration-line: line-through;
     opacity: 0.5;
-}
-
-#labelText{
-    font-weight: bold;
 }

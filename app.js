@@ -78,7 +78,7 @@ function filterItem(e){
 function searchItem(e){
     const allItems = todoList.childNodes;
     allItems.forEach(item => {
-        lowerText = item.innerText.toLowerCase();
+        lowerText = item.innerText.toLowerCase(); //allow searches to match regardless of case
         if (lowerText.includes(e.target.value.toLowerCase())){
             item.style.display = "flex";
         } else {
